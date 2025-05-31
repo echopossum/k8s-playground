@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  create-cluster:
+      cmds:
+        - kind create cluster --config kind-config.yml
+      desc: Creates a kubernetes cluster using kind
+
+  delete-cluster:
+    cmds:
+      - kind delete cluster
+    desc: Deletes the cluster
