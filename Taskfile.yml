@@ -20,3 +20,8 @@ tasks:
     cmds:
       - kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
     desc: Installs MetalLB by manifest into the cluster
+  
+  metalLB-apply-config:
+    cmds:
+      - kubectl apply -f ./metalLB/metallb-config.yml
+    desc: Applys config to metalLB
